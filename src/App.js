@@ -7,22 +7,6 @@ import ShoppingCard from "./components/ShoppingCard";
 import Products from "./components/Products";
 import ProductDetail from "./components/ProductDetail";
 export default function App() {
-  const products = [
-    {
-      name: "Awesome Ring",
-      price: 20,
-      Id: "a789c",
-      ImageUrl: "https://pngimg.com/uploads/ring/ring_PNG38.png",
-    },
-    {
-      name: "Rubic Cube",
-      price: 30,
-      Id: "a78asd9c",
-      ImageUrl:
-        "https://i.pinimg.com/originals/08/05/a8/0805a8f92d5f8a31a15587859b965264.png",
-    },
-  ];
-
   return (
     <Router>
       <div>
@@ -33,12 +17,12 @@ export default function App() {
           </Route>
           <Route path="/">
             <div class="flex ">
-              {products.map((e) => {
-                return <Products products={e} />;
-              })}
+              <Products />;
             </div>
           </Route>
-          <Route exact path="/product/:id" component={ProductDetail} />
+          <Route exact path="/product/:id">
+            <ProductDetail />
+          </Route>
         </Switch>
       </div>
     </Router>
