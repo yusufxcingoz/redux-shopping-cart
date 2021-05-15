@@ -7,9 +7,8 @@ Check the app from here: https://react-redux-shopping-cart11.herokuapp.com/
 Shopping cart appilication made with react redux.
 
 ### Used Tech
-  -React.js
-  -Redux
-  -Tailwind.css
-  -React Router
-
+  * React.js
+  * Redux
+  * Tailwind.css
+  * React-router
 
