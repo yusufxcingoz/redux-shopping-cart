@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-function Header() {
+function Header({ cart }) {
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
   return (
     <div class="flex justify-between items-center h-16 mt-0 px-16 bg-gray-500">
       <div class=" ">
@@ -13,11 +24,17 @@ function Header() {
       <div class=" flex">
         <Link to="/shoppingcard">Card</Link>
         <div class="mx-2">
-          <h1>0$</h1>
+          <h1>{cartCount}</h1>
         </div>
       </div>
     </div>
   );
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(Header);

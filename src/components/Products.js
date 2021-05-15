@@ -4,7 +4,6 @@ import { connect, connectFunction } from "react-redux";
 import Product from "./products/product/Product";
 
 function Products({ products }) {
-  console.log(products);
   return (
     <div class=" mt-10  mx-5 flex flex-row items-center">
       {products.map((product) => (
