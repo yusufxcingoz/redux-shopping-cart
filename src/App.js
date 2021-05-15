@@ -17,7 +17,7 @@ import { connect } from "react-redux";
 function App({ currentItem }) {
   return (
     <Router>
-      <div>
+      <div class="w-max-full">
         <Header />
         <Switch>
           <Route exact path="/" component={Products} />

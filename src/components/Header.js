@@ -14,7 +14,7 @@ function Header({ cart }) {
     setCartCount(count);
   }, [cart, cartCount]);
   return (
-    <div class="flex justify-between items-center h-16 mt-0 px-16 bg-gray-500">
+    <div class="flex w-max-full justify-between items-center h-16 mt-0 px-16 bg-gray-500">
       <div class=" ">
         <Link to="/">Home</Link>
       </div>

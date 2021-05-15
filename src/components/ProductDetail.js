@@ -6,8 +6,8 @@ function ProductDetail({ product, addToCart, currentItem }) {
   console.log(currentItem);
   return (
     <div class="flex flex-row justify-center mt-44   ">
-      <div class="flex flex-row w-1/2 h-96 m-auto justify-between	   bg-gray-300  ">
-        <img class="m-10" src={currentItem.ImageUrl} />
+      <div class="flex flex-row   max-w-4xl h-96 m-auto justify-between	   bg-gray-300  ">
+        <img class="m-10 max-w-sm" src={currentItem.ImageUrl} />
         <div class="flex flex-col text-center m-20 justify-between">
           <h1 class="text-2xl font-bold">{currentItem.name}</h1>
           <p1></p1>
