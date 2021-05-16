@@ -11,4 +11,5 @@ Shopping cart appilication made with react redux.
   * Redux
   * Tailwind.css
   * React-router
+  * Fake Store API
 
