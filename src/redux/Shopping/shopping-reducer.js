@@ -1,27 +1,16 @@
 import * as actionTypes from "./shopping-types";
 
 const INITIAL_STATE = {
-  products: [
-    {
-      name: "Awesome Ring",
-      price: 20,
-      id: "a789c",
-      ImageUrl: "https://pngimg.com/uploads/ring/ring_PNG38.png",
-    },
-    {
-      name: "Rubic Cube",
-      price: 30,
-      id: "a78asd9c",
-      ImageUrl:
-        "https://i.pinimg.com/originals/08/05/a8/0805a8f92d5f8a31a15587859b965264.png",
-    },
-  ], //id, title, description, price, image
+  products: [], //id, title, description, price, image
   cart: [],
   currentItem: null,
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case actionTypes.SET_ITEM:
+      return { ...state, products: action.payload };
+
     case actionTypes.ADD_TO_CART:
       // Great Item data from products array
       const item = state.products.find(

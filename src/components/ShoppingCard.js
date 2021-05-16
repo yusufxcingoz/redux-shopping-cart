@@ -21,13 +21,13 @@ function ShoppinCard({ cart }) {
   }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
   return (
     <div class=" mt-10  mx-5 flex flex-row items-center justify-between">
-      <div class="flex">
+      <div class="grid grid-flow-col grid-cols-2 grid-rows-3 gap-4">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
       </div>
 
-      <div class="flex flex-col text-center bg-gray-300 justify-between w-96 h-72 p-10 rounded-2xl mx-16 ">
+      <div class="flex flex-col text-center bg-gray-300 justify-between w-96 h-72 p-10 rounded-xl mx-16 ">
         <h1 class="text-xl font-bold">Purchase Summary</h1>
         <div class="flex justify-between">
           <p class="text-lg font-bold">Total Items ({totalItems}) Items</p>

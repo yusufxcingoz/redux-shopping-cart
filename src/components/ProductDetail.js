@@ -6,11 +6,11 @@ function ProductDetail({ product, addToCart, currentItem }) {
   console.log(currentItem);
   return (
     <div class="flex flex-row justify-center mt-44   ">
-      <div class="flex flex-row   max-w-4xl h-96 m-auto justify-between	   bg-gray-300  ">
-        <img class="m-10 max-w-sm" src={currentItem.ImageUrl} />
+      <div class="flex flex-row   max-w-4xl  m-auto justify-between	border-2     ">
+        <img class="m-10 max-w-sm" src={currentItem.image} />
         <div class="flex flex-col text-center m-20 justify-between">
-          <h1 class="text-2xl font-bold">{currentItem.name}</h1>
-          <p1></p1>
+          <h1 class="text-2xl font-bold">{currentItem.title}</h1>
+          <p1>{currentItem.description}</p1>
           <h1 class="text-xl font-bold">$ {currentItem.price} </h1>
           <div>
             <button

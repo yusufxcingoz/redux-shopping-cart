@@ -11,12 +11,12 @@ function CartItem({ item, removeFromCart, adjustQty }) {
   };
   return (
     <div>
-      <div class="flex mx-5 bg-gray-300 flex-col justify-center p-5 rounded-xl items-center">
+      <div class="flex mx-5 border-2 flex-col items-center justify-center p-5 rounded-xl items-center">
         <div class="w-32 h-32  p-5 ">
-          <img src={item.ImageUrl} />
+          <img src={item.image} />
         </div>
-        <div class="flex flex-col justify-center m-auto  ">
-          <h1>{item.name}</h1>
+        <div class="flex flex-col justify-center m-auto pt-8  ">
+          <h1>{item.title}</h1>
           <p>{item.price}$</p>
           <Link to={`/product/${item.id}`}>
             <button class="w-32 bg-blue-300 my-5 text-center">

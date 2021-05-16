@@ -1,5 +1,12 @@
 import * as actionTypes from "./shopping-types";
+import axios from "axios";
 
+export const setItem = (products) => {
+  return {
+    type: actionTypes.SET_ITEM,
+    payload: products,
+  };
+};
 export const addToCart = (itemID) => {
   return {
     type: actionTypes.ADD_TO_CART,
